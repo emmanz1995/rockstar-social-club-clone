@@ -47,6 +47,14 @@ export const SimpleNav = styled.div`
             color: #fcaf17;
         }
     }
+    @media screen and (max-width: 700px) {
+        ul {
+           flex-direction: column; 
+           align-items: center;
+           justify-content: center;
+        }
+        
+    }
 `;
 
 export const RecentActivitySection = styled.div`

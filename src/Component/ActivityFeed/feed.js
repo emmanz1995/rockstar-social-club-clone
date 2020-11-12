@@ -41,7 +41,7 @@ export default class Feed extends React.Component {
                     </RecentActivitySection>
                     <br/>
                 </div>
-                <div className="col-md-12" style={{position: "absolute", top: "310px"}}>
+                <div className="col-md-12">
                     <div className="row">
                         <div className="col-md-4">
                             <WallActivitySection body className="activity-card">

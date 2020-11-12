@@ -38,5 +38,14 @@ export const Navigation = styled.div`
             border-radius: 50%;
         }
     }
-    
+    @media screen and (max-width: 700px) {
+        ul {
+            flex-direction: column;
+        }
+        .download-btn {
+            font-size: 10px;
+            height: 30px;
+            width: 50%;
+        }
+    }
 `;

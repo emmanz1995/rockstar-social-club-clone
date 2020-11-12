@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
 
 export const ProfileSection = styled.div`
     display: flex;
@@ -95,6 +96,51 @@ export const WallActivitySection = styled(Card)`
 `;
 
 export const FriendNotification = styled(Card)`
-    padding: 65px;
+    // padding: 65px;
     box-shadow: 2px 2px 4px #888888;
+    .request-tab {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+        border: 1px solid #e6e6e6;
+        padding: 2px;
+    }
+    .main-img {
+        display: flex;
+    }
+    .username-detail {
+        margin: 0 5px;
+        flex: 1;
+    }
+    .fa-user-friends {
+        border-radius: 50%;
+        border: 1px solid #e6e6e6;
+        padding: 5px;
+    }
+    .update-section {
+        display: flex;
+    }
+    .icon-section {
+        flex: 1;
+    }
+`;
+
+export const CompareStats = styled(Card)`
+    .card-body-section {
+        background-image: url(./assets/sc-card-stats.jpg);
+        min-height: 357px;
+    }
+`;
+
+export const SnapmaticPhotos = styled(Card)`
+    .card-body-section {
+        background-image: url(./assets/sc-card-snapmatic.jpg);
+        min-height: 312px;
+    }
+`;
+
+export const StyledButton = styled(Button)`
+    background: linear-gradient(90deg,#f7931e,#fcaf17);
+    border-color: #fcaf17;
+    width: 100%;
 `;

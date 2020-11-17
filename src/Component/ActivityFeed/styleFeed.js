@@ -5,6 +5,11 @@ import Button from "react-bootstrap/Button";
 export const ProfileSection = styled.div`
     display: flex;
     justify-content: space-between;
+    @media screen and (max-width: 700px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
     .profile-img {
         margin: 10px 0;
     }

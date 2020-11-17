@@ -10,7 +10,7 @@ export default class Navbar extends React.Component {
                         <img src="./assets/sc-logo.jpg" height="50" alt="sc-logo"/>
                         <li><a style={{textDecoration: 'none', color: "white"}} href="#">Games</a></li>
                         <li><a style={{textDecoration: 'none', color: "white"}} href="#">Crews</a></li>
-                        <li><a style={{textDecoration: 'none', color: "white"}}  href="#">Jobs</a></li>
+                        <li><a style={{textDecoration: 'none', color: "white"}} href="#">Jobs</a></li>
                         <li><a style={{textDecoration: 'none', color: "white"}} href="#">Photos</a></li>
                         <li><a style={{textDecoration: 'none', color: "white"}} href="#">Videos</a></li>
                         <li><a style={{textDecoration: 'none', color: "white"}} href="#">Events</a></li>

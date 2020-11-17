@@ -11,7 +11,7 @@ export const SigninContainer = styled.div`
         display: flex;
         flex-direction: column;
         background-colour: white;
-        height: 20rem;
+        height: 18.2rem;
         width: 31.25rem;
         // border: black solid 1px;
         border-radius: 4px;
@@ -73,6 +73,7 @@ export const SigninContainer = styled.div`
         height: 5rem;
         width: 31.25rem;
         border-radius: 4px;
+        color: #4d4d4d;
         .fa-playstation {
             margin: 10px;
             font-size: 35px;

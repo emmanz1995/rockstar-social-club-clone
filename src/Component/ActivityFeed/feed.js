@@ -26,9 +26,9 @@ export default class Feed extends React.Component {
                     </ProfileSection>
                     <SimpleNav>
                         <ul>
-                            <li><a href="#">Wall</a></li>
-                            <li><a href="#">Games</a></li>
-                            <li><a href="#">Friends</a></li>
+                            <li><a href="/feed">Wall</a></li>
+                            <li><a href="/games">Games</a></li>
+                            <li><a href="/friends">Friends</a></li>
                             <li><a href="#">Crews</a></li>
                             <li><a href="#">Jobs</a></li>
                             <li><a href="#">Photos</a></li>

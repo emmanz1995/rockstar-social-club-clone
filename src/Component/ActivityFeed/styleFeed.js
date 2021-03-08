@@ -2,9 +2,16 @@ import styled from "styled-components";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
+export const Banner = styled.div`
+  clip-path: polygon(100% 0,100% 100%,50% calc(100% - 50px),0 100%,0 0);
+  margin-bottom: -20px;
+  padding: 20px;
+`
 export const ProfileSection = styled.div`
     display: flex;
     justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1420px;
     @media screen and (max-width: 700px) {
         flex-direction: column;
         align-items: center;
@@ -36,6 +43,8 @@ export const ProfileSection = styled.div`
 export const SimpleNav = styled.div`
     background-color: #fff;
     border-radius: 4px;
+      margin: 0 auto;
+      max-width: 1420px;
     ul {
         display: flex;
     }
@@ -58,12 +67,13 @@ export const SimpleNav = styled.div`
            align-items: center;
            justify-content: center;
         }
-        
     }
 `;
 
 export const RecentActivitySection = styled.div`
     display: flex;
+    margin: 0 auto;
+    max-width: 1420px;
     .activity-title {
         flex: 1;
     }
@@ -81,6 +91,8 @@ export const RecentActivitySection = styled.div`
 export const WallActivitySection = styled(Card)`
     display: flex;
     box-shadow: 2px 2px 4px #888888;
+    margin: 0 auto;
+    max-width: 1420px;
     textarea {
         width: 100%;
         border: 1px solid #f2f2f2;
@@ -99,7 +111,7 @@ export const WallActivitySection = styled(Card)`
     .btn-post {
         height: 35px;
         width: 50px;
-        background: linear-gradient(90deg,#f7931e,#fcaf17);
+        background: linear-gradient(90deg, #f7931e, #fcaf17);
         border: 1px solid #fcaf17;
         border-radius: 4px;
         &:hover {

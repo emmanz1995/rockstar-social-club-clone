@@ -10,12 +10,12 @@ export const SigninContainer = styled.div`
     .signin-section {
         display: flex;
         flex-direction: column;
-        background-colour: white;
+        background-color: white;
         height: 18.2rem;
         width: 31.25rem;
         // border: black solid 1px;
         border-radius: 4px;
-        border-shadow: 1px 2px 5px 5px;
+        box-shadow: 1px 2px 5px 5px;
         font-size: 12px;
         margin: 10px;
     }

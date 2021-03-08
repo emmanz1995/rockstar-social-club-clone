@@ -5,6 +5,8 @@ export const Navigation = styled.div`
     justify-content: space-between;
     background-color: black;
     align-items: center;
+    //margin: 0 auto;
+    //max-width: 1420px;
     ul {
         display: flex;
         align-items: center;

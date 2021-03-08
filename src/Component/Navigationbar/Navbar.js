@@ -18,8 +18,8 @@ export default class Navbar extends React.Component {
                     </ul>
                     <div className="profile-min-section">
                         <button className="download-btn">Download Launcher</button>
-                        <a classname="bell-icon" href="#"><i className="far fa-bell" /></a>
-                        <img className="img-profile" src="./assets/Josiah-Tralawny-icon.png" alt="profile-img" height="30"/>
+                        <a className="bell-icon" href="#"><i className="far fa-bell" /></a>
+                        <a href="#"><img className="img-profile" src="./assets/Josiah-Tralawny-icon.png" alt="profile-img" height="30"/></a>
                     </div>
                 </Navigation>
             </>

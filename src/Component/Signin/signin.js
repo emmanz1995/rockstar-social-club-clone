@@ -44,6 +44,9 @@ export default class Signin extends React.Component {
                             <a href="#"><i className="fab fa-twitter" /></a>
                         </div>
                     </div>
+                    <div>
+                        <p>Not a member? <a href="#">Create a new account</a></p>
+                    </div>
                 </SigninContainer>
             </>
         );

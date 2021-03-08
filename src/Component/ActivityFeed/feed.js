@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../Navigationbar/Navbar";
-import { ProfileSection, SimpleNav, RecentActivitySection, WallActivitySection, FriendNotification, CompareStats, SnapmaticPhotos, StyledButton } from './styleFeed';
+import {Banner, ProfileSection, SimpleNav, RecentActivitySection, WallActivitySection, FriendNotification, CompareStats, SnapmaticPhotos, StyledButton } from './styleFeed';
 import Card from "react-bootstrap/Card";
 
 export default class Feed extends React.Component {
@@ -8,7 +8,7 @@ export default class Feed extends React.Component {
         return(
             <>
                 <Navbar/>
-                <div className="col-md-12" style={{backgroundColor: '#fcaf17'}}>
+                <Banner className="col-md-12" style={{backgroundColor: '#fcaf17'}}>
                     <ProfileSection>
                         <div className="profile-img">
                             <img src="./assets/Josiah-Tralawny-icon.png" alt="Profile img" height="100" />
@@ -40,13 +40,13 @@ export default class Feed extends React.Component {
                         <a className="filter" href="#">Filter{' '}<i className="fas fa-sort-amount-down" /></a>
                     </RecentActivitySection>
                     <br/>
-                </div>
+                </Banner>
                 <div className="col-md-12">
                     <div className="row">
                         <div className="col-md-4">
                             <WallActivitySection body className="activity-card">
                                 <img className="img-card" src="./assets/Josiah-Tralawny-icon.png" alt="Profile" height="30"/>
-                                <textarea type="text" maxlength="200" height="52" placeholder="What's up, emmanz95?" />
+                                <textarea type="text" maxLength="200" height="52" placeholder="What's up, emmanz95?" />
                                 <div className="text-btn">
                                     <p>Post a message to your wall</p>
                                     <button className="btn-post">Post</button>

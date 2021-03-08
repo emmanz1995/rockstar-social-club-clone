@@ -1,14 +1,14 @@
 import './App.css';
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, useHistory } from "react-router-dom";
 import Signin from "./Component/Signin/signin";
 import Feed from "./Component/ActivityFeed/feed";
 import GamesTab from "./Component/GamesList/GamesTab";
-import FriendsTab from "./Component/FriendsList/FriendsTab"
-import { history } from "./Component/historyUtil";
+import FriendsTab from "./Component/FriendsList/FriendsTab";
+import Home from "./Component/Home/Home";
 
-class App extends React.Component {
-  render() {
+function App() {
+    const history = useHistory();
     return (
         <div>
             <Router history={history}>
@@ -25,11 +25,13 @@ class App extends React.Component {
                     <Route path="/games">
                         <GamesTab/>
                     </Route>
+                    <Route path="/home">
+                        <Home />
+                    </Route>
                 </Switch>
             </Router>
         </div>
     );
-  }
 }
 
 export default App;

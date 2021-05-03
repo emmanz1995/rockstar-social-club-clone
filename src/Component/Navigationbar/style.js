@@ -16,6 +16,13 @@ export const Navigation = styled.div`
         margin: 15px;
         text-transform: uppercase;
     }
+    .wrapper {
+      width: 100%;
+      max-width: 1500px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+    }
     .nav-title {
         color: #fff;
     }

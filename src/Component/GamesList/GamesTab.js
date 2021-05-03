@@ -33,7 +33,7 @@ const GamesTab = () => {
             <div>
                 <Navbar />
                 <Banner />
-                <div className="col-md-12">
+                <div className="col-md-12" style={{ position: 'relative', bottom: '40px' }}>
                     <GameWrapper>
                         <GamesWallSection>
                             <div>

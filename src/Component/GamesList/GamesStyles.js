@@ -18,10 +18,10 @@ export const GamesWallSection = styled.div`
 
 export const GameWrapper = styled.div`
     padding: 0 1.25rem 1.25rem;
-    box-shadow: 2px 2px 4px #888888;
-    background-color: lightgrey;
+    background-color: #fff;
     margin: 0 auto;
     max-width: 1420px;
+    box-shadow: ${props => props.theme.boxShadow};
 `;
 
 export const GameCard = styled(Card)`

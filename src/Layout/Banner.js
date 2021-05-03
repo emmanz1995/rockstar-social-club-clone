@@ -30,7 +30,7 @@ function Banner() {
                     <li><a href="#">Videos</a></li>
                 </ul>
             </SimpleNav>
-            <br/>
+            <br/><br /><br />
         </BannerContainer>
     )
 }

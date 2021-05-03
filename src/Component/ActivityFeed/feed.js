@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../Navigationbar/Navbar";
-import {Banner, ProfileSection, SimpleNav, RecentActivitySection, WallActivitySection, FriendNotification, CompareStats, SnapmaticPhotos, StyledButton } from './styleFeed';
+import {Banner, ProfileSection, SimpleNav, WallGrid, RecentActivitySection, WallActivitySection, FriendNotification, CompareStats, SnapmaticPhotos, StyledButton } from './styleFeed';
 import Card from "react-bootstrap/Card";
 
 export default class Feed extends React.Component {
@@ -8,7 +8,7 @@ export default class Feed extends React.Component {
         return(
             <>
                 <Navbar/>
-                <Banner className="col-md-12" style={{backgroundColor: '#fcaf17'}}>
+                <Banner className="col-md-12">
                     <ProfileSection>
                         <div className="profile-img">
                             <img src="./assets/Josiah-Tralawny-icon.png" alt="Profile img" height="100" />
@@ -39,9 +39,9 @@ export default class Feed extends React.Component {
                         <h4 className="activity-title">Recent Activity</h4>
                         <a className="filter" href="#">Filter{' '}<i className="fas fa-sort-amount-down" /></a>
                     </RecentActivitySection>
-                    <br/>
+                    <br/><br />
                 </Banner>
-                <div className="col-md-12">
+                <div className="col-md-12" style={{ maxWidth: '1500px', margin: '0 auto', position: 'relative', bottom: '40px' }}>
                     <div className="row">
                         <div className="col-md-4">
                             <WallActivitySection body className="activity-card">

@@ -26,9 +26,8 @@ function App() {
                 <GlobalStyles />
                 <Router history={history}>
                     <Switch>
-                        <Route exact path="/">
-                            <Signin/>
-                        </Route>
+                        <Route exact path="/" component={Signin} />
+
                         <Route path="/feed">
                             <Feed />
                         </Route>

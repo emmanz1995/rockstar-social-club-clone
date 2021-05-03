@@ -1,8 +1,9 @@
 import React from "react";
 import { SigninContainer } from './style';
-import { history } from "../historyUtil";
+import { useHistory } from 'react-router-dom';
 
  const Signin = () => {
+   const history = useHistory();
    const [username, setUsername] = React.useState('');
    const [password, setPassword] = React.useState('');
    function handleSubmit(evt) {

@@ -48,10 +48,49 @@ const MainWrapper = styled.main`
       height: 2.7rem;
     }
   }
+  .friends-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media screen and (max-width: ${props => props.theme.mobile}) {
+    .friends-list {
+      flex-direction: column;
+    }
+  }
 `
 
+const FriendCard = styled.div`
+  padding: 15px;
+  width: 30%;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .profile-flex {
+    display: flex;
+    align-items: center;
+    img {
+      margin: 0 10px;
+    }
+    p {
+      font-weight: bold;
+    }
+  }
+  .crew-flex {
+    p {
+      font-weight: bold;
+    }
+  }
+  @media screen and (max-width: ${props => props.theme.mobile}) {
+    width: 100%;
+  }
+`;
+
 export {
-    MainWrapper
+    MainWrapper,
+    FriendCard
 }
 
 // padding: 0 1.25rem 0 0;

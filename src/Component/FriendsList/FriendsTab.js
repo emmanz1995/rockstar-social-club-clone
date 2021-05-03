@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from '../Navigationbar/Navbar';
 import Banner from "../../Layout/Banner";
-import { MainWrapper } from "./FriendsTabStyles";
+import { MainWrapper, FriendCard } from "./FriendsTabStyles";
 import axios from "axios";
 
 const FriendsTab = () => {
@@ -25,9 +25,16 @@ const FriendsTab = () => {
     }, [])
 
     const friendsList = friends?.friends?.length > 0 ? friends?.friends?.map(friend => (
-        <div key={friend.id} className="friend-card">
-            <p>{friend.displayName}</p>
-        </div>
+        <FriendCard key={friend.id}>
+            <div className="profile-flex">
+                <img src={friend.profileImg} alt="" height="60" width="60" />
+                <p>{friend.displayName}</p>
+            </div>
+            <div className="crew-flex">
+                <p>{friend.crewTag}</p>
+                {/*<i className="fas fa-ellipsis-v" />*/}
+            </div>
+        </FriendCard>
     )) : <p>You have no friends, that's sad, sorry!</p>
     return(
         <MainWrapper>

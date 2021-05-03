@@ -18,6 +18,7 @@ export const ProfileSection = styled.div`
     }
     .profile-img {
         margin: 10px 0;
+      border: 1px solid #fff;
     }
     .mini-profile {
         margin: 0 10px;

@@ -1,30 +1,36 @@
 import React from "react";
 import { Navigation } from "./style";
+import { AuthService } from "../../Service/AuthService";
+import { useHistory } from "react-router-dom"
 
-export default class Navbar extends React.Component {
-    render() {
-        return(
-            <>
-                <Navigation>
-                    <div className="wrapper">
-                        <ul>
-                            <img src="./assets/sc-logo.jpg" height="50" alt="sc-logo"/>
-                            <li><a style={{textDecoration: 'none', color: "white"}} href="#">Games</a></li>
-                            <li><a style={{textDecoration: 'none', color: "white"}} href="#">Crews</a></li>
-                            <li><a style={{textDecoration: 'none', color: "white"}} href="#">Jobs</a></li>
-                            <li><a style={{textDecoration: 'none', color: "white"}} href="#">Photos</a></li>
-                            <li><a style={{textDecoration: 'none', color: "white"}} href="#">Videos</a></li>
-                            <li><a style={{textDecoration: 'none', color: "white"}} href="#">Events</a></li>
-                            <li><a style={{textDecoration: 'none', color: "white"}} href="#">News</a></li>
-                        </ul>
-                        <div className="profile-min-section">
-                            <button className="download-btn">Download Launcher</button>
-                            <a className="bell-icon" href="#"><i className="far fa-bell" /></a>
-                            <a href="#"><img className="img-profile" src="./assets/Josiah-Tralawny-icon.png" alt="profile-img" height="30"/></a>
-                        </div>
-                    </div>
-                </Navigation>
-            </>
-        );
+export default function Navbar() {
+    const history = useHistory();
+    const handleSignout = (evt) => {
+        evt.preventDefault();
+        AuthService.onSignout();
+        history.push('/');
     }
+    return(
+        <>
+            <Navigation>
+                <div className="wrapper">
+                    <ul>
+                        <img src="./assets/sc-logo.jpg" height="50" alt="sc-logo"/>
+                        <li><a href="#">Games</a></li>
+                        <li><a href="#">Crews</a></li>
+                        <li><a href="#">Jobs</a></li>
+                        <li><a href="#">Photos</a></li>
+                        <li><a href="#">Videos</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">News</a></li>
+                    </ul>
+                    <div className="profile-min-section">
+                        <button className="download-btn">Download Launcher</button>
+                        <a className="bell-icon" href="#"><i className="far fa-bell" /></a>
+                        <a href="#" onClick={handleSignout}><img className="img-profile" src="./assets/Josiah-Tralawny-icon.png" alt="profile-img" height="30"/></a>
+                    </div>
+                </div>
+            </Navigation>
+        </>
+    );
 }

@@ -8,6 +8,8 @@ import FriendsTab from "./Component/FriendsList/FriendsTab";
 import Home from "./Component/Home/Home";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import theme from "./Config/theme";
+import { PrivateRoute } from './Config/privateRoute';
+import Settings from "./Component/ProfileSettings/Settings";
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -27,19 +29,11 @@ function App() {
                 <Router history={history}>
                     <Switch>
                         <Route exact path="/" component={Signin} />
-
-                        <Route path="/feed">
-                            <Feed />
-                        </Route>
-                        <Route path="/friends">
-                            <FriendsTab/>
-                        </Route>
-                        <Route path="/games">
-                            <GamesTab/>
-                        </Route>
-                        <Route path="/home">
-                            <Home />
-                        </Route>
+                        <PrivateRoute path="/feed" component={Feed} />
+                        <Route path="/friends" component={FriendsTab} />
+                        <Route path="/games" component={GamesTab} />
+                        <Route path="/home" component={Home} />
+                        <Route path="/settings" component={Settings} />
                     </Switch>
                 </Router>
             </div>

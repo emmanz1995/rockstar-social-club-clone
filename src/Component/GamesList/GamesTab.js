@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../Navigationbar/Navbar";
 import Banner from "../../Layout/Banner";
-import { GamesWallSection, GameWrapper, GameCard } from "./GamesStyles";
-import Card from "react-bootstrap/Card";
+import {
+    GamesWallSection,
+    GameWrapper,
+    GameCard
+} from "./GamesStyles";
 import axios from 'axios';
 
 const GamesTab = () => {
@@ -13,13 +16,13 @@ const GamesTab = () => {
             axios.get("/RockstarGamesInfo.json")
             .then((response) => {
                 if(response.status === 200) {
-                    setGames(response.data)
-                    setIsLoading(true)
-                    console.log('Games Info: ', response.data)
+                    setGames(response.data);
+                    setIsLoading(true);
+                    console.log('Games Info: ', response.data);
                 }
             })
         }
-        return fetchGames()
+        return fetchGames();
     }, [])
 
     if(!isLoading) {

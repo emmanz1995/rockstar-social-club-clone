@@ -1,21 +1,30 @@
 import React from "react";
 import { SigninContainer } from './style';
 import { useHistory } from 'react-router-dom';
+import { AuthService } from "../../Service/AuthService";
 
- const Signin = () => {
+const Signin = () => {
    const history = useHistory();
-   const [username, setUsername] = React.useState('');
+   const [email, setEmail] = React.useState('');
    const [password, setPassword] = React.useState('');
    function handleSubmit(evt) {
-        evt.preventDefault()
-        history.push("/feed");
+        evt.preventDefault();
+        let formData = {
+            email: email,
+            password: password
+        }
+        AuthService.onSignin(formData)
+            .then(() => {
+                history.push('/feed');
+            })
+            .catch(error => console.log(error));
     }
     return(
         <>
             <SigninContainer>
                 <div className="signin-section" style={{backgroundColor: "white"}}>
                     <h2>Sign in with Social Club</h2>
-                    <input type="text" name="username" value={username} onChange={(evt)=> setUsername(evt.target.value)} placeholder="Username"/>
+                    <input type="text" name="email" value={email} onChange={(evt)=> setEmail(evt.target.value)} placeholder="Email"/>
                     <input type="password" name="password" value={password} onChange={(evt)=> setPassword(evt.target.value)} placeholder="Password"/>
                     <div className="flex-input">
                         <input type="checkbox" id="ckb-keep" name="keep-me" value="Keep"/>

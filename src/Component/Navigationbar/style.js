@@ -16,6 +16,10 @@ export const Navigation = styled.div`
         margin: 15px;
         text-transform: uppercase;
     }
+    a {
+      text-decoration: none;
+      color: white;
+    }
     .wrapper {
       width: 100%;
       max-width: 1500px;

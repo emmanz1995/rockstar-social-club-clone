@@ -1,13 +1,11 @@
 import React from "react";
 import { Navigation } from "./style";
-import { AuthService } from "../../Service/AuthService";
 import { useHistory } from "react-router-dom"
 
 export default function Navbar() {
     const history = useHistory();
     const handleSignout = (evt) => {
         evt.preventDefault();
-        AuthService.onSignout();
         history.push('/');
     }
     return(

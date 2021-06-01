@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../Navigationbar/Navbar";
 import {
     Banner,
@@ -9,14 +9,12 @@ import {
     FriendNotification,
     CompareStats,
     SnapmaticPhotos,
-    StyledButton
+    StyledButton,
 } from './styleFeed';
 import Card from "react-bootstrap/Card";
-import { AuthService } from "../../Service/AuthService";
-import {useHistory} from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 export default function Feed() {
-    const user = AuthService.getUserInfo();
     const history = useHistory();
     const handleSubmit = (evt) => {
         evt.preventDefault();
@@ -31,10 +29,10 @@ export default function Feed() {
                         <img src="./assets/Josiah-Tralawny-icon.png" alt="Profile img" height="100" />
                     </div>
                     <div className="mini-profile">
-                        <h3><b>{user.user.username || 'emmanz95'}</b></h3>
+                        <h3><b>emmanz95</b></h3>
                         <div style={{display: "flex"}}>
                             <a style={{marginRight: "5px"}} href="#"><i className="fab fa-playstation" /></a>
-                            <p>{user.user.username || 'emmanz95'}</p>
+                            <p>emmanz95</p>
                         </div>
                     </div>
                     <div className="edit-btn">
@@ -54,14 +52,26 @@ export default function Feed() {
                 </SimpleNav>
                 <RecentActivitySection>
                     <h4 className="activity-title">Recent Activity</h4>
-                    <a className="filter" href="#">Filter{' '}<i className="fas fa-sort-amount-down" /></a>
+                    <a className="filter" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" height="16" width="16"
+                             className="UI__Icon__icon" title="Show Filters" data-ui-name="filter_icon"
+                             aria-hidden="false" id="ui-icon-filter-2445">
+                            <path
+                                d="M29.7 6.2H19c-.7 0-1.3-.6-1.3-1.3s.6-1.3 1.3-1.3h10.7c.7 0 1.3.6 1.3 1.3s-.6 1.3-1.3 1.3zM11.5 9.7c-2.2 0-4-1.5-4.6-3.5H2.3C1.6 6.2 1 5.6 1 4.9s.6-1.3 1.3-1.3H8c.7 0 1.3.6 1.3 1.3 0 1.2 1 2.2 2.2 2.2.6 0 1.1-.2 1.5-.6.4-.4.7-1 .7-1.6 0-1.2-1-2.2-2.2-2.2h-.4c-.7.1-1.4-.3-1.5-1-.1-.7.3-1.4 1-1.5.3-.1.6-.1.9-.1 2.6 0 4.8 2.1 4.8 4.8 0 1.3-.5 2.6-1.5 3.5-.9.8-2.1 1.3-3.3 1.3zM13 18.1H2.3c-.7 0-1.3-.6-1.3-1.3s.6-1.3 1.3-1.3H13c.7 0 1.3.6 1.3 1.3s-.6 1.3-1.3 1.3zM20.5 21.6c-2.6 0-4.8-2.1-4.8-4.8 0-1.3.5-2.6 1.5-3.5.9-.8 2.1-1.3 3.3-1.3 2.2 0 4 1.5 4.6 3.5h4.6c.7 0 1.3.6 1.3 1.3s-.6 1.3-1.3 1.3H24c-.7 0-1.3-.6-1.3-1.3 0-1.2-1-2.2-2.2-2.2-.6 0-1.1.2-1.5.6-.5.4-.7 1-.7 1.6 0 1.2 1 2.2 2.2 2.2h.4c.7-.1 1.4.3 1.5 1 .1.7-.3 1.4-1 1.5-.2.1-.5.1-.9.1z" />
+                            <g>
+                                <path
+                                    d="M29.7 28.4H19c-.7 0-1.3-.6-1.3-1.3s.6-1.3 1.3-1.3h10.7c.7 0 1.3.6 1.3 1.3s-.6 1.3-1.3 1.3zM11.5 31.9c-2.2 0-4-1.5-4.6-3.5H2.3c-.7 0-1.3-.6-1.3-1.3s.6-1.3 1.3-1.3H8c.7 0 1.3.6 1.3 1.3 0 1.2 1 2.2 2.2 2.2.6 0 1.1-.2 1.5-.6.4-.4.7-1 .7-1.6 0-1.2-1-2.2-2.2-2.2h-.4c-.7.1-1.4-.3-1.5-1-.1-.7.3-1.4 1-1.5.3-.1.6-.1.9-.1 2.6 0 4.8 2.1 4.8 4.8 0 1.3-.5 2.6-1.5 3.5-.9.8-2.1 1.3-3.3 1.3z" />
+                            </g>
+                        </svg>
+                    </a>
                 </RecentActivitySection>
                 <br/><br />
             </Banner>
-            <div className="col-md-12" style={{ maxWidth: '1500px', margin: '0 auto', position: 'relative', bottom: '40px' }}>
+            <div className="col-md-12" style={{ maxWidth: '1535px', margin: '0 auto', position: 'relative', bottom: '40px' }}>
                 <div className="row">
                     <div className="col-md-4">
                         <WallActivitySection body className="activity-card">
+                            <input name="title" type="text" placeholder="Enter your Title" /><br />
                             <img className="img-card" src="./assets/Josiah-Tralawny-icon.png" alt="Profile" height="30"/>
                             <textarea type="text" maxLength="200" height="52" placeholder="What's up, emmanz95?" />
                             <div className="text-btn">

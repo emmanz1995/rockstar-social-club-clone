@@ -5,10 +5,8 @@ import {
     CurrentUserContainer,
     AccountSettingsContainer
 } from './SettingsStyles';
-import { AuthService } from "../../Service/AuthService";
 
 const Settings = () => {
-    const currentUser = AuthService.getUserInfo();
     return(
         <div>
             <Navbar />
@@ -17,19 +15,19 @@ const Settings = () => {
                 <CurrentUserContainer>
                     <span>
                         <div>
-                            <p>Full Name:</p><p>{currentUser.user.fullName}</p>
+                            <p>Full Name:</p><p>Emmanuel Okuchukwu</p>
                         </div>
                         <a href="#">Edit</a>
                     </span>
                     <span>
                         <div>
-                            <p>Nickname:</p><p>{currentUser.user.username}</p>
+                            <p>Nickname:</p><p>emmanz95</p>
                         </div>
                         <a href="#">Edit</a>
                     </span>
                     <span>
                         <div>
-                            <p>Email:</p><p>{currentUser.user.email}</p>
+                            <p>Email:</p><p>emmanza2@gmail.com</p>
                         </div>
                         <a href="#">Edit</a>
                     </span>

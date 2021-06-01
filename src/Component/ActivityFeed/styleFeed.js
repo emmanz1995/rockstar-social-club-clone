@@ -182,10 +182,14 @@ export const WallActivitySection = styled(Card)`
         width: 100%;
         border: 1px solid #f2f2f2;
         padding: 0 40px;
+        margin: 10px 0;
+    }
+    input {
+      width: 100%;
     }
     .img-card {
         position: absolute;
-        top: 27px;
+        top: 67px;
         left: 25px;
         border-radius: 50%;
     }
@@ -256,3 +260,9 @@ export const SnapmaticPhotos = styled(Card)`
       border-color: #fcaf17;
       width: 100%;
     `;
+
+export const PostCard = styled(Card)`
+  margin: 10px 0;
+  padding: 15px;
+  
+`
